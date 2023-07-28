@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "Courses",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Uid": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Introduction": {
+      "type": "richtext"
+    },
+    "Topics": {
+      "displayName": "Topics",
+      "type": "component",
+      "repeatable": true,
+      "component": "topics.topics"
+    },
+    "Details": {
+      "type": "richtext"
+    },
+    "Score": {
+      "type": "string"
+    },
+    "VideoPresentationLink": {
+      "type": "string"
+    },
+    "Category": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "string"
+    },
+    "Instructor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::instructor.instructor",
+      "inversedBy": "Courses"
+    },
+    "Students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student.student",
+      "mappedBy": "Course"
+    },
+    "Banner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "RedirectionLink": {
+      "type": "string"
+    },
+    "StartDate": {
+      "type": "datetime"
+    }
+  }
+}

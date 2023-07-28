@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_topics_topics",
+  "info": {
+    "displayName": "Topics",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "Topic": {
+      "type": "string"
+    }
+  }
+}

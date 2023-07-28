@@ -1,0 +1,51 @@
+{
+  "kind": "singleType",
+  "collectionName": "companies",
+  "info": {
+    "singularName": "company",
+    "pluralName": "companies",
+    "displayName": "Company",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Address": {
+      "type": "string"
+    },
+    "Telephone": {
+      "type": "string"
+    },
+    "WhatsappLink": {
+      "type": "string"
+    },
+    "ImportantLink": {
+      "type": "string"
+    },
+    "VideoLink": {
+      "type": "string"
+    }
+  }
+}

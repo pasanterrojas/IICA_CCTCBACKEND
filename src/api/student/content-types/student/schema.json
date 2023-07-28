@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "singularName": "student",
+    "pluralName": "students",
+    "displayName": "Students",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Uid": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Password": {
+      "type": "password"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Blocked": {
+      "type": "boolean"
+    },
+    "Course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "Students"
+    }
+  }
+}
